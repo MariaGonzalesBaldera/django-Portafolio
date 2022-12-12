@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
 ]
 
-CSRF_TRUSTED_ORIGINS =['https://django-portafolio-production.up.railway.app/']
+CSRF_TRUSTED_ORIGINS =['https://django-portafolio-production.up.railway.app']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
