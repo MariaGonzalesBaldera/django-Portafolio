@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{%block content%}
+<style> 
+    
+    #body_login{background-color:blanchedalmond; width: 60%; margin: 20%;padding: 2%;}
+</style>
+<div id="body_login" class="container mt-5" >
+    <div class="btn-wrap">
+        <a href="/register/" class="btn-buy">Registrarse</a>
+      </div>
+    <div class="card" style="width:50%;margin:auto">
+        <div class="card-body">
+            <h3 class="h3">Login</h3>
+            <h6> Inicia sessión para conocer más </h6>
+            <form method="post" novalidate >
+                {% csrf_token %}
+                <div class="row card">
+                    <div class="col-12 mt-3">
+                        <input type="text" name="username" placeholder="username" class="form-control ">
+                    </div>
+                    <div class="col-12 mt-3">
+                        <input type="password" name="password" placeholder="password" class="form-control">
+                    </div>
+                    <div class="col-12 d-grid">
+                        <button type="submit" class="btn btn-warning mt-3">
+                            Iniciar Sessión
+                        </button>
+                    </div>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+</div>
+{%endblock content%}

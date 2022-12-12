@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{%block content%}
+
+<style> 
+    #body_login{background-color:blanchedalmond; width: 70%; margin: 15%;padding: 2%;}
+</style>
+<div id="body_login" class="container mt-5" >
+    <a href="{% url 'login' %}" class="btn-buy">Login</a>
+    <div class="card" style="width:50%;margin:auto">
+        <div class="card-body">
+            <h3>Nuevo Usuario </h3>
+            <form method="post" novalidate>
+                {% csrf_token %}
+                {{form.as_p}}
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-warning mt-3">Crear usuario</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    const inputs = document.querySelectorAll('input');
+    inputs.forEach((input)=>{
+        input.classList.add('form-control');
+    });
+</script>
+
+
+{%endblock content%}
